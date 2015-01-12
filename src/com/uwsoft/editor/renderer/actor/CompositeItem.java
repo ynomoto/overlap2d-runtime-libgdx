@@ -517,7 +517,7 @@ public class CompositeItem extends Group implements IBaseItem {
                 item.setBody(null);
             }
             
-            item.setBody(PhysicsBodyLoader.createBody(essentials.world, item.getDataVO().physicsBodyData, essentials.rm.getProjectVO().meshes.get(item.getDataVO().meshId), new Vector2(mulX, mulY)));
+            item.setBody(PhysicsBodyLoader.createBody(essentials.world, item.getDataVO().physicsBodyData, essentials.rm.getProjectVO().meshes.get(item.getDataVO().meshId + ""), new Vector2(mulX, mulY)));
             item.getBody().setTransform(toStageVec.x, toStageVec.y, (float) Math.toRadians(item.getDataVO().rotation));
         }
     }
